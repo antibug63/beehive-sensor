@@ -1,0 +1,38 @@
+function Decoder(bytes, port) {
+  // Decode an uplink message from a buffer
+  // (array) of bytes to an object of fields.
+  var decoded = {};
+ 
+  // Batterie
+  rawVbat = bytes[1] + bytes[2] * 256;
+  decoded.bat = rawVbat /100;
+  
+  // Poids
+  rawWeight = bytes[3] + bytes[4] * 256;
+  decoded.poid = rawWeight /100;
+  
+  // humidity 
+  
+  rawHumid = bytes[5] + bytes[6] * 256;
+  decoded.hext = rawHumid /100 ;
+   // temperature 
+
+  rawTemp = bytes[7] + bytes[8]* 256 ;
+  
+  decoded.text= rawTemp /100;
+  
+       // temperatures DS18b20 
+
+  rawDS18B20_1 = bytes[9] + bytes[10]* 256 ;
+  decoded.int1 = rawDS18B20_1 /100;
+
+  rawDS18B20_2 = bytes[11] + bytes[12] * 256;
+  decoded.int2 =rawDS18B20_2 /100;
+
+  
+  
+
+  
+
+  return decoded;
+}
