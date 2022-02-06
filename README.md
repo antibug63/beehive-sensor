@@ -1,6 +1,6 @@
 # Beehive sensor data
 Weight, temperature and humidity measurement in a beehive using Arduino and LoRaWan (TTN).\
-[Deutscher Text](./README-de.md).
+
 
 ![Arduino compile test](https://github.com/joergkeller/beehive-sensor/workflows/Arduino%20compile%20test/badge.svg)
 
